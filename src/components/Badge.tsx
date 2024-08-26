@@ -38,4 +38,7 @@ const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(({ className, bullet,
 	<div ref={ref} className={cn(badgeVariants({ ...props, bullet, className }))} {...props} />
 ));
 
+
+Badge.displayName = 'Badge';
+
 export default Badge;

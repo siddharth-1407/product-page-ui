@@ -6,10 +6,8 @@ import { filters } from '@/DummyData/Filters';
 import FilterByTerpenes from './FilterByTerpenes';
 import FilterByManufacturer from './FilterByManufacturer';
 import FilterMultiSelectButton from '../FilterMultiSelectButton';
-import useWindowResize from '@/hooks/useWindowResize';
 
 export default function Filter() {
-	const window = useWindowResize();
 	return (
 		<aside>
 			<div className='hidden lg:flex flex-col min-w-62 sticky top-12'>
@@ -17,7 +15,9 @@ export default function Filter() {
 					<p className='w-full font-semibold text-2xl text-primary-foreground'>Filter</p>
 				</header>
 				<section className='divide-y-2 divide-accent'>
-					<section className={'py-6'}>{window.width >= 1024 && <FilterByManufacturer />}</section>
+					<section className={'py-6'}>
+						<FilterByManufacturer />
+					</section>
 					{filters.map((item) => {
 						return (
 							<section key={item.filterTitle} className='py-6 flex flex-col gap-6'>

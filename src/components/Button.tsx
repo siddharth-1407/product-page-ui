@@ -32,4 +32,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ className, is
 	<button className={cn(buttonVariants({ isSelected, variant, className }))} ref={ref} {...props} />
 ));
 
+Button.displayName = 'Button';
+
 export default Button;

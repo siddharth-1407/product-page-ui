@@ -7,4 +7,5 @@ const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
 	</div>
 ));
 
+CardHeader.displayName = 'CardHeader';
 export default CardHeader;

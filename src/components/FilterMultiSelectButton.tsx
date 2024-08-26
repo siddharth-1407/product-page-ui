@@ -12,4 +12,5 @@ const FilterMultiSelectButton = forwardRef<HTMLButtonElement, React.ButtonHTMLAt
 	return <Button ref={ref} variant={'option'} {...props} isSelected={isSelected} onClick={onClick} />;
 });
 
+FilterMultiSelectButton.displayName = 'FilterMultiSelectButton';
 export default FilterMultiSelectButton;

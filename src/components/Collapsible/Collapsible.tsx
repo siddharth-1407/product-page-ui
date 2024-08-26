@@ -17,4 +17,5 @@ const Collapsible = ({ className, children, open, ...props }: { children: ReactE
 	);
 };
 
+Collapsible.displayName = 'Collapsible';
 export default Collapsible;

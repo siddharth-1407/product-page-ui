@@ -6,5 +6,5 @@ const Navigation = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
 		{children}
 	</nav>
 ));
-
+Navigation.displayName = 'Navigation';
 export default Navigation;

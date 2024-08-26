@@ -6,5 +6,5 @@ const Header = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElem
 		{children}
 	</header>
 ));
-
+Header.displayName = 'Header';
 export default Header;

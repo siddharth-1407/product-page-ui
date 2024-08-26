@@ -42,5 +42,5 @@ const CollapsibleTrigger = React.forwardRef<HTMLButtonElement, CollapsibleTrigge
 		);
 	}
 );
-
+CollapsibleTrigger.displayName = 'CollapsibleTrigger';
 export default CollapsibleTrigger;

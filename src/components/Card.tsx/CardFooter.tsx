@@ -6,5 +6,5 @@ const CardFooter = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
 		{children}
 	</div>
 ));
-
+CardFooter.displayName = 'CardFooter';
 export default CardFooter;

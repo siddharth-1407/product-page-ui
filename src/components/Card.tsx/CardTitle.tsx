@@ -21,4 +21,5 @@ const CardTitle = React.forwardRef<HTMLDivElement, CardTitleProps>(({ children, 
 	</h2>
 ));
 
+CardTitle.displayName = 'CardTitle';
 export default CardTitle;

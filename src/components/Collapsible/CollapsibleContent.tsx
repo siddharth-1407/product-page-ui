@@ -28,4 +28,5 @@ const CollapsibleContent = React.forwardRef<HTMLDivElement, CollapsibleContentPr
 	return <div key={`${id}-content`} ref={ref} className={cn(collapsibleContentVariants({ isOpen }), className)} {...props} />;
 });
 
+CollapsibleContent.displayName = 'CollapsibleContent';
 export default CollapsibleContent;
