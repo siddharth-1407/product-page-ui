@@ -15,7 +15,7 @@ function NavigationLinks() {
 		<Navigation className='p-0 flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-6 max-w-96 flex-wrap'>
 			{links?.map((data) => {
 				return (
-					<Link href={data.path} id={data.id} className={'flex whitespace-nowrap gap-1 text-primary-foreground'}>
+					<Link key={data.id} href={data.path} id={data.id} className={'flex whitespace-nowrap gap-1 text-primary-foreground'}>
 						<span className={'w-3 h-3 aspect-square rounded-tl-full rounded-br-full bg-border'}></span>
 						<span className='text-secondary font-normal '>{data.title}</span>
 					</Link>

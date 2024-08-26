@@ -44,6 +44,7 @@ const Navbar = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElem
 	</Header>
 ));
 
+Navbar.displayName = 'Navbar';
 export default Navbar;
 
 const NavLink = ({ data }: { data: NavLinkType }) => {
