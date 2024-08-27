@@ -11,6 +11,7 @@ import ToggleSwitch from '@/components/ToggleSwitch';
 import { products, ProductType } from '@/DummyData/Products';
 import { List, Search } from 'lucide-react';
 import Image from 'next/image';
+import RangeSlider from '@/components/RangeSlider';
 
 export default function Home() {
 	return (
@@ -36,7 +37,6 @@ export default function Home() {
 							/>
 							<Search className='w-6 h-6 absolute right-2 top-1/2 -translate-y-1/2 text-border' />
 						</div>
-
 						<Collapsible className={'w-fit relative'}>
 							<CollapsibleTrigger className='text-sm bg-primary-30 px-3 py-1.5 rounded-sm pr-10 whitespace-nowrap'>
 								<span>Sortieren nach</span>
@@ -46,7 +46,6 @@ export default function Home() {
 								<span className='py-2 hover:bg-primary-10'>Price: Max-Min</span>
 							</CollapsibleContent>
 						</Collapsible>
-
 						<ToggleSwitch>
 							<span>Verfügbarkeit</span>
 						</ToggleSwitch>

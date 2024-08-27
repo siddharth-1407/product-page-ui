@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useId } from 'react';
+import React, { useId } from 'react';
 import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
 
@@ -22,9 +22,6 @@ export interface CollapsibleContentProps extends React.HTMLAttributes<HTMLDivEle
 
 const CollapsibleContent = React.forwardRef<HTMLDivElement, CollapsibleContentProps>(({ isOpen, className, ...props }, ref) => {
 	const id = useId();
-	useEffect(() => {
-		console.log(isOpen);
-	}, [isOpen]);
 	return <div key={`${id}-content`} ref={ref} className={cn(collapsibleContentVariants({ isOpen }), className)} {...props} />;
 });
 

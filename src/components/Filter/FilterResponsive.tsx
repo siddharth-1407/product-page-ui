@@ -10,13 +10,14 @@ import { Check, X } from 'lucide-react';
 import Collapsible from '../Collapsible/Collapsible';
 import CollapsibleTrigger from '../Collapsible/CollapsibleTrigger';
 import CollapsibleContent from '../Collapsible/CollapsibleContent';
+import RangeSlider from '../RangeSlider';
 
 export default function FilterResponsive() {
 	return (
-		<div className='lg:hidden z-40 flex-1 sticky top-[60px] bg-white w-full py-1.5 px-2'>
+		<div className='lg:hidden z-40 flex-1 sticky top-[60px] bg-white w-full py-1.5 px-2 '>
 			<Sheet>
 				<SheetTrigger className='font-semibold text-lg underline text-primary-foreground'>Filter</SheetTrigger>
-				<SheetContent side={'left'} className='pt-10'>
+				<SheetContent side={'left'} className='pt-10 overflow-scroll'>
 					<SheetTitle className='w-full h-fit py-0.5 text-center bg-primary-10 rounded-sm'>
 						<p className='w-full font-semibold text-2xl text-primary-foreground'>Filter</p>
 					</SheetTitle>
@@ -47,6 +48,12 @@ export default function FilterResponsive() {
 								</CollapsibleContent>
 							</Collapsible>
 						</section>
+						<section className='py-6'>
+							<RangeSlider min={0} max={50} step={1} defaultValue={[11, 18]} title='THC Gehalt' />
+						</section>
+						<section className='py-6'>
+							<RangeSlider min={0} max={10} step={1} defaultValue={[1, 5]} title='CBD Gehalt' />
+						</section>
 						{filters.map((item) => {
 							return (
 								<section key={item.filterTitle} className='py-6 flex flex-col gap-6'>
@@ -61,6 +68,7 @@ export default function FilterResponsive() {
 								</section>
 							);
 						})}
+
 						<section className='py-6'>
 							<FilterByTerpenes />
 						</section>

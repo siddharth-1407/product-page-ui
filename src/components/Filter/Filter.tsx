@@ -6,6 +6,7 @@ import { filters } from '@/DummyData/Filters';
 import FilterByTerpenes from './FilterByTerpenes';
 import FilterByManufacturer from './FilterByManufacturer';
 import FilterMultiSelectButton from '../FilterMultiSelectButton';
+import RangeSlider from '../RangeSlider';
 
 export default function Filter() {
 	return (
@@ -17,6 +18,15 @@ export default function Filter() {
 				<section className='divide-y-2 divide-accent'>
 					<section className={'py-6'}>
 						<FilterByManufacturer />
+					</section>
+					<section className='py-6'>
+						<RangeSlider min={0} max={50} step={1} defaultValue={[11, 18]} title='THC Gehalt' />
+					</section>
+					<section className='py-6'>
+						<RangeSlider min={0} max={10} step={1} defaultValue={[1, 5]} title='CBD Gehalt' />
+					</section>
+					<section className='py-6'>
+						<FilterByTerpenes />
 					</section>
 					{filters.map((item) => {
 						return (
@@ -32,9 +42,7 @@ export default function Filter() {
 							</section>
 						);
 					})}
-					<section className='py-6'>
-						<FilterByTerpenes />
-					</section>
+
 					<section className='py-6 '>
 						<Button className='bg-transparent p-0 rounded-none w-full py-1.5 flex gap-1 items-center justify-center text-black hover:underline'>
 							<span>
